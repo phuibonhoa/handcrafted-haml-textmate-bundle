@@ -55,7 +55,7 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^ *(/)\s*\S.*$\n?</string>
+			<string>^[ \t]*(/)\s*\S.*$\n?</string>
 			<key>name</key>
 			<string>comment.line.slash.haml</string>
 		</dict>
@@ -69,13 +69,13 @@
 				</dict>
 			</dict>
 			<key>match</key>
-			<string>^ *(-#)\s*\S.*$\n?</string>
+			<string>^[ \t]*(-#)\s*\S.*$\n?</string>
 			<key>name</key>
 			<string>comment.line.slash.haml</string>
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^( *)(/)\s*$</string>
+			<string>^([ \t]*)(/)\s*$</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -98,7 +98,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>^( *)(-#)\s*$</string>
+			<string>^([ \t]*)(-#)\s*$</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>2</key>
@@ -357,9 +357,9 @@
 		<key>coffeescript</key>
 		<dict>
 			<key>begin</key>
-			<string>^(\s*):coffeescript</string>
+			<string>^(\s*):coffee(?:script)?</string>
 			<key>end</key>
-			<string>^(?!\1\s)</string>
+			<string>^(?!\1[ \t])(?=[ \t]*\S)</string>
 			<key>name</key>
 			<string>source.coffee</string>
 			<key>patterns</key>
@@ -388,7 +388,7 @@
 			<key>begin</key>
 			<string>^(\s*):css</string>
 			<key>end</key>
-			<string>^(?!\1\s)</string>
+			<string>^(?!\1[ \t])(?=[ \t]*\S)</string>
 			<key>name</key>
 			<string>source.css</string>
 			<key>patterns</key>
@@ -435,7 +435,7 @@
 			<key>begin</key>
 			<string>^(\s*):erb</string>
 			<key>end</key>
-			<string>^(?!\1\s)</string>
+			<string>^(?!\1[ \t])(?=[ \t]*\S)</string>
 			<key>name</key>
 			<string>text.html.ruby.embedded.haml</string>
 			<key>patterns</key>
@@ -495,7 +495,7 @@
 			<key>begin</key>
 			<string>^(\s*):javascript</string>
 			<key>end</key>
-			<string>^(?!\1\s)</string>
+			<string>^(?!\1[ \t])(?=[ \t]*\S)</string>
 			<key>name</key>
 			<string>source.js</string>
 			<key>patterns</key>
@@ -636,7 +636,7 @@
 			<key>begin</key>
 			<string>^(\s*):ruby</string>
 			<key>end</key>
-			<string>^(?!\1\s)</string>
+			<string>^(?!\1[ \t])(?=[ \t]*\S)</string>
 			<key>name</key>
 			<string>source.ruby.rails.embedded.haml</string>
 			<key>patterns</key>
@@ -695,7 +695,7 @@
 			<key>begin</key>
 			<string>^(\s*):sass</string>
 			<key>end</key>
-			<string>^(?!\1 )</string>
+			<string>^(?!\1[ \t])(?=[ \t]*\S)</string>
 			<key>name</key>
 			<string>source.sass</string>
 			<key>patterns</key>
